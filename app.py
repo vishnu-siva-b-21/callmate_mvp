@@ -125,7 +125,7 @@ def process_audio():
 # ------------------- Main -------------------
 if __name__ == "__main__":
     # Use this for local dev
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    # app.run(host="0.0.0.0", port=5000, debug=True)
     # For production: use waitress or gunicorn
-    # from waitress import serve
-    # serve(app, host="0.0.0.0", port=8000)
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=8000)
